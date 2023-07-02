@@ -1,4 +1,2 @@
 #!/usr/bin/env bash
-sockets_info=$(ss -tlnp)
-filtered_info=$(echo "$sockets_info" | awk 'NR>1 {print $2, $NF}')
-echo "$filtered_info"
+sudo netstat -tunlp
